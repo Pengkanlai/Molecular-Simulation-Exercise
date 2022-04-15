@@ -109,5 +109,5 @@ void Integrate(double Step,VECTOR *Momentum)
   }
  
   // add the kinetic part of the pressure
-  Pressure+=2.0*UKinetic*NumberOfParticles/(CUBE(Box)*(3.0*NumberOfParticles));
+  Pressure+=2.0*UKinetic*NumberOfParticles/(CUBE(Box)*(3.0*NumberOfParticles-3.0));
 }
