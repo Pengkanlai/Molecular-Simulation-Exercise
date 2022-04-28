@@ -54,9 +54,9 @@ void Integrate(double Step,VECTOR *Momentum)
     (*Momentum).y+=Velocities[i].y;
     (*Momentum).z+=Velocities[i].z;
  
-    NewPositions[i].x=OldPositions[i].x+Velocities[i].x*Deltat;
-    NewPositions[i].y=OldPositions[i].y+Velocities[i].y*Deltat;
-    NewPositions[i].z=OldPositions[i].z+Velocities[i].z*Deltat;
+    NewPositions[i].x=OldPositions[i].x+2.0*Velocities[i].x*Deltat;
+    NewPositions[i].y=OldPositions[i].y+2.0*Velocities[i].y*Deltat;
+    NewPositions[i].z=OldPositions[i].z+2.0*Velocities[i].z*Deltat;
 
     PositionsNONPDB[i].x+=NewPositions[i].x-Positions[i].x;
     PositionsNONPDB[i].y+=NewPositions[i].y-Positions[i].y;
