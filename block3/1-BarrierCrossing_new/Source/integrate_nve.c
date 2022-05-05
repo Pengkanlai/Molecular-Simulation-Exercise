@@ -17,13 +17,15 @@
 // to calculate the force and energy for a given position,
 // see force.c
 
+//变量都定义在system.c里，所以这里不用重新定义
+
 void IntegrateNVE(void)
 {
   double U,F,NewVelocity;
 
   // start modification
-  F= Force(Position,&U,&F);
-  NewVelocity=Velocity+Tstep*F;
+  F= Force(Position,&U,&F);//calculate the force
+  NewVelocity=Velocity+Tstep*F; //update the velocity
   Position = Position + NewVelocity*Tstep;
   //Conserved quantity is v(t)=(v_pos + v_new)/2.
   //We square them, so we need to factor of 8.
