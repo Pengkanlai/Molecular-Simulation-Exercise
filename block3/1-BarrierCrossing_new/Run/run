@@ -8,6 +8,9 @@
 # FREQNOS   = FREQUENCY NOSE-HOOVER CHAIN
 # NNOSHOVER = LENGTH OF THE NH CHAIN
 #
+
+//这里可以自己选运行哪个版本
+
 # CHOICE    = 1 (NVE)
 #           = 2 (ANDERSEN)
 #           = 3 (NOSE-HOOVER CHAIN)
