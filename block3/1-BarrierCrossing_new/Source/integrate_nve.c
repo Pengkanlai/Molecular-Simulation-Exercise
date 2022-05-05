@@ -22,7 +22,7 @@ void IntegrateNVE(void)
   double U,F,NewVelocity;
 
   // start modification
-  F= Force(Position,U,F);
+  F= Force(Position,&U,&F);
   NewVelocity=Velocity+Tstep*F;
   Position = Position + NewVelocity*Tstep;
   //Conserved quantity is v(t)=(v_pos + v_new)/2.
