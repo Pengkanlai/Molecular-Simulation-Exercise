@@ -1,4 +1,0 @@
-#! /bin/bash -f
-#
-time ../Source/pi.exe
-exit
