@@ -54,12 +54,12 @@ int main(void)
       // end   modification
 
       // accept or reject
-      if((RandomNumber()<exp(-Beta*(New-Old)))&&(Old!=New))
+      if(RandomNumber()<exp(-Beta*(New-Old)))
       {  
       // calculate average occupancy result
-        if(i>NumberOfInitializationSteps)
+        if(i>NumberOfInitializationSteps && Old!=New)
         {
-          Sum+=Old;
+          Sum+=New;
           Count+=1.0;
         }
         Old=New;
